@@ -4,19 +4,21 @@
     <v-row class="mt-5">
       <v-col cols="4">
         <v-img
-          class="mr-4"
           lazy-src="../assets/ratablanca-sde.jpg"
           max-height="560"
           max-width="800"
           src="../assets/ratablanca-sde.jpg"
+          contain
+          class="ma-2"
         ></v-img>
         <v-card
           variant="outlined"
           elevation="22"
           class="mt-20, ml-5"
           color="yellow"
+          v-on="descargarICS"
         >
-          <v-card-title>Sincronizar calendario</v-card-title>
+          <v-card-title>Sincronizar Calendario</v-card-title>
 
           <v-card-text>
             <!-- <v-icon color="primary">mdi-map-marker</v-icon> -->
@@ -30,15 +32,11 @@
             </v-btn>
             <v-spacer></v-spacer>
             <v-btn icon>
-              <v-icon color="red" size="24">mdi-youtube</v-icon>
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn icon>
               <v-icon color="lightblue" size="24">mdi-twitter</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
             <v-btn icon>
-              <v-icon color="orange" size="24">mdi-instagram</v-icon>
+              <v-icon color="green" size="24">mdi-whatsapp</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -130,6 +128,12 @@ export default {
     values: ["foo", "bar"],
     value: null,
   }),
+
+  methods: {
+    descargarICS() {
+      console.log("Presiono el evento de descargarICS");
+    },
+  },
 };
 </script>
 
